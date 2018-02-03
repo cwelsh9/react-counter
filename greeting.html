@@ -9,20 +9,41 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
   <script type="text/babel">
-    class Greeting extends React.Component {
-      render() {
-        return (
-          <div>
-            <h1>Hello {this.props.name}!</h1>
-          </div>
+  class Greeting extends React.Component {
+    render() {
+      return (
+        <div>
+        <h1>Hello {this.props.name}!</h1>
+        </div>
       );
     }
   }
 
-    ReactDOM.render(
-      <Greeting name="Bloc Student"/>, document.getElementById('app')
+  ReactDOM.render(
+    <Greeting name="Bloc Student"/>, document.getElementById('app')
   );
-    </script>
-  </body>
+
+  class myComponent extends React.Component {
+    this.state = {
+      stage: "Adulthood"
+    }
+
+    render() {
+      return (
+        <div>
+        <h1>Hello {this.props.number}</h1>
+        <h2>Birthday: {this.props.birthdate}</h2>
+        <h3>Stage: {this.state.stage}</h3>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(
+    <myComponent number="9"/>, document.getElementById('app')
+    <myComponent birthdate="6/2/93" />, document.getElementById('app')
+  );
+  </script>
+</body>
 
 </html>
